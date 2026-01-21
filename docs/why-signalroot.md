@@ -1,3 +1,7 @@
+---
+description: Discover how SignalRoot delivers value across your entire organization - from business leaders to engineering teams, product managers to customer support.
+---
+
 # Why SignalRoot?
 
 SignalRoot isn't just for technical teams - it's a platform that delivers value across your entire organization. Here's how different teams benefit:

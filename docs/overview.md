@@ -1,3 +1,7 @@
+---
+description: SignalRoot is an advanced alert enrichment platform that transforms raw alerts into actionable incidents with deployment context and historical insights.
+---
+
 # Overview
 
 SignalRoot is an advanced alert enrichment platform that transforms your raw alerts into actionable incidents with deployment context and historical insights.
