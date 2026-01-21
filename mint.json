@@ -40,19 +40,19 @@
     {
       "group": "Getting Started",
       "pages": [
-        "overview",
-        "why-signalroot",
+        "docs/overview",
+        "docs/why-signalroot",
         "quickstart",
-        "installation"
+        "docs/installation"
       ]
     },
     {
       "group": "API Reference",
       "pages": [
         "api-reference",
-        "authentication",
-        "endpoints",
-        "sdk"
+        "docs/authentication",
+        "docs/endpoints",
+        "docs/sdk"
       ]
     },
     {
