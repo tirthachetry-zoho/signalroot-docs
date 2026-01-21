@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - SignalRoot Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #1a202c;
+            color: #cfbddb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        code {
+            background: #f3f4f6;
+            color: #e11d48;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .endpoint-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #10b981;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-indigo-600 rounded-lg">
+                        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 4 7.5 4S4.168 5.477 3 7.5s1.168 2.477 3.5 2.477zM6.5 21v-4.5m0-4.5h11m-11 4.5v4.5"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">SignalRoot Docs</h1>
+                        <p class="text-sm text-gray-500">API Reference</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-500 hover:text-gray-700">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-6h4l-7-7-7 7z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/signalroot/signalroot" class="text-gray-500 hover:text-gray-700">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.1-.464.1-.702-.025-.288-.076-.543-.146-.78.134-.313.298-.617.462-1.125.086-.453.214-.904.479-1.36.337-.802-.594-1.2-.933-1.772-.615-2.878-.977-5.542-1.029-6.7-.6-3.4-.6-6.8 0-10.2 5.8-11.9 2.6-2.8 7.8-2.8 10.2 0 5.1-3.7 9.4-8.9 10.2-2.8 1.4-6.7 4.7-11.9 4.2-4.6 5.8-10.4 7.8-17.4.9-1.7 2.7-3.4 3.9-5.1 4.3-5.7 5.9-7.8 1.6-2.8 2.9-5.9 4.5-8.9.1-1.9 2.2-3.9 3.3-5.8 4.3-7.7 1.7-3.2 2.5-6.4 3.5-9.6 5.1-14.4.1-2.6 2-5.2 2.6-7.9 0-5.4-2.9-10.9-5.8-14.8-2.6-4.4-5.2-9.1-5.5-13.3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex items-center space-x-2 text-sm text-gray-500">
+            <a href="index.html" class="hover:text-gray-700">Home</a>
+            <span>/</span>
+            <span class="text-gray-900">API Reference</span>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="prose prose-lg max-w-none">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8">SignalRoot API Reference</h1>
+                
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Base URL</h2>
+                    <div class="endpoint-box">
+                        <pre><code>Production: https://api.signalroot.com
+Development: http://localhost:8080</code></pre>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Authentication</h2>
+                    <p class="text-gray-600 mb-6">SignalRoot uses API key authentication for secure access.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Getting Your API Key</h3>
+                    <ol class="list-decimal list-inside space-y-2 mb-6 text-gray-600">
+                        <li>Navigate to <strong>Settings</strong> → <strong>API Keys</strong> in the dashboard</li>
+                        <li>Click <strong>Generate New Key</strong></li>
+                        <li>Copy the key and store it securely</li>
+                    </ol>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Using the API Key</h3>
+                    <p class="text-gray-600 mb-6">Include the API key in the <code>Authorization</code> header:</p>
+                    <pre class="mb-8"><code>curl -H "Authorization: Bearer YOUR_API_KEY" \
+  https://api.signalroot.com/api/teams</code></pre>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Core Endpoints</h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Health Check</h3>
+                            <div class="endpoint-box">
+                                <pre><code>GET /actuator/health</code></pre>
+                                <p class="text-gray-600 mt-4">Check the health status of the SignalRoot service.</p>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Response:</h4>
+                            <pre class="mb-6"><code>{
+  "status": "UP",
+  "components": {
+    "db": {
+      "status": "UP",
+      "details": {
+        "database": "PostgreSQL",
+        "validationQuery": "isValid()"
+      }
+    }
+  }
+}</code></pre>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Teams Management</h3>
+                            
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Get All Teams</h4>
+                            <div class="endpoint-box">
+                                <pre><code>GET /api/fake-customers/teams
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Retrieve all configured teams with their services and alert frequencies.</p>
+                            </div>
+
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Get Team Details</h4>
+                            <div class="endpoint-box">
+                                <pre><code>GET /api/fake-customers/teams/{teamId}
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Get detailed information about a specific team.</p>
+                            </div>
+
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Get Team Statistics</h4>
+                            <div class="endpoint-box">
+                                <pre><code>GET /api/fake-customers/teams/{teamId}/stats
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Retrieve statistics and metrics for a specific team.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Alert Processing</h3>
+                            
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Process PagerDuty Alert</h4>
+                            <div class="endpoint-box">
+                                <pre><code>POST /webhooks/alerts/pagerduty
+Content-Type: application/json</code></pre>
+                                <p class="text-gray-600 mt-4">Process PagerDuty alerts with automatic enrichment.</p>
+                            </div>
+
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Request Body:</h4>
+                            <pre class="mb-6"><code>{
+  "messages": [{
+    "type": "incident",
+    "incident": {
+      "id": "INC123",
+      "status": "triggered",
+      "title": "API Gateway High Latency",
+      "service": "payment-service",
+      "severity": "high",
+      "details": {
+        "impacted_services": ["payment-api", "checkout-flow"],
+        "error_rate": "12%",
+        "response_time": "2.3s"
+      }
+    }
+  }]
+}</code></pre>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Dogfooding Scenarios</h3>
+                            
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Get All Scenarios</h4>
+                            <div class="endpoint-box">
+                                <pre><code>GET /api/dogfooding/scenarios
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Retrieve all available dogfooding scenarios for testing.</p>
+                            </div>
+
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Run All Scenarios</h4>
+                            <div class="endpoint-box">
+                                <pre><code>POST /api/dogfooding/run-all
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Execute all dogfooding scenarios to test the system.</p>
+                            </div>
+
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Run Specific Scenario</h4>
+                            <div class="endpoint-box">
+                                <pre><code>POST /api/dogfooding/scenarios/{scenarioId}/run
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Execute a specific dogfooding scenario.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Version Management</h3>
+                            
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Get Current Version</h4>
+                            <div class="endpoint-box">
+                                <pre><code>GET /api/versions/version/current
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Get the current version and release information.</p>
+                            </div>
+
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Get Changelog</h4>
+                            <div class="endpoint-box">
+                                <pre><code>GET /api/versions/changelog/{version}
+Authorization: Bearer YOUR_API_KEY</code></pre>
+                                <p class="text-gray-600 mt-4">Retrieve the changelog for a specific version.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">SDKs and Libraries</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">JavaScript/TypeScript</h4>
+                            <pre class="text-sm"><code>npm install @signalroot/sdk</code></pre>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Python</h4>
+                            <pre class="text-sm"><code>pip install signalroot-sdk</code></pre>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Go</h4>
+                            <pre class="text-sm"><code>go get github.com/signalroot/go-sdk</code></pre>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">JavaScript Example</h3>
+                    <pre class="mb-8"><code>import { SignalRootClient } from '@signalroot/sdk';
+
+const client = new SignalRootClient({
+  apiKey: 'YOUR_API_KEY',
+  baseUrl: 'https://api.signalroot.com'
+});
+
+// Get teams
+const teams = await client.getTeams();
+
+// Process alert
+const result = await client.processAlert({
+  type: 'incident',
+  service: 'payment-service',
+  severity: 'high',
+  title: 'API latency spike'
+});</code></pre>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Rate Limits</h2>
+                    <div class="overflow-x-auto mb-8">
+                        <table class="min-w-full border border-gray-300">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Plan</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Requests/Minute</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Requests/Hour</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Requests/Day</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Free</td>
+                                    <td class="border border-gray-300 px-4 py-2">60</td>
+                                    <td class="border border-gray-300 px-4 py-2">1,000</td>
+                                    <td class="border border-gray-300 px-4 py-2">10,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Pro</td>
+                                    <td class="border border-gray-300 px-4 py-2">600</td>
+                                    <td class="border border-gray-300 px-4 py-2">10,000</td>
+                                    <td class="border border-gray-300 px-4 py-2">100,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Enterprise</td>
+                                    <td class="border border-gray-300 px-4 py-2">6,000</td>
+                                    <td class="border border-gray-300 px-4 py-2">100,000</td>
+                                    <td class="border border-gray-300 px-4 py-2">1,000,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-gray-600 mb-6">Rate limit headers are included in responses:</p>
+                    <pre class="mb-8"><code>X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 45
+X-RateLimit-Reset: 1642694400</code></pre>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Error Handling</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Standard Error Response</h3>
+                    <pre class="mb-8"><code>{
+  "error": {
+    "code": "INVALID_API_KEY",
+    "message": "The provided API key is invalid or expired",
+    "details": {
+      "timestamp": "2024-01-20T16:51:04.533015Z",
+      "requestId": "req_abc123"
+    }
+  }
+}</code></pre>
+
+                    <div class="overflow-x-auto mb-8">
+                        <table class="min-w-full border border-gray-300">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Code</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Description</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Solution</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2"><code>INVALID_API_KEY</code></td>
+                                    <td class="border border-gray-300 px-4 py-2">API key is invalid or expired</td>
+                                    <td class="border border-gray-300 px-4 py-2">Generate a new API key</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2"><code>RATE_LIMIT_EXCEEDED</code></td>
+                                    <td class="border border-gray-300 px-4 py-2">Too many requests</td>
+                                    <td class="border border-gray-300 px-4 py-2">Wait and retry</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2"><code>TEAM_NOT_FOUND</code></td>
+                                    <td class="border border-gray-300 px-4 py-2">Team ID doesn't exist</td>
+                                    <td class="border border-gray-300 px-4 py-2">Check team ID</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-green-900 mb-2">🚀 Ready to Integrate?</h3>
+                    <p class="text-green-800">Start building with SignalRoot API today! Check out our SDKs and examples to get started quickly.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-500">
+                <p>&copy; 2024 SignalRoot. All rights reserved.</p>
+                <p class="mt-2">Built with ❤️ using modern documentation tools</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-gray-600">Home</a>
+                    <a href="getting-started.html" class="text-gray-400 hover:text-gray-600">Getting Started</a>
+                    <a href="https://github.com/signalroot/signalroot" class="text-gray-400 hover:text-gray-600">GitHub</a>
+                    <a href="https://discord.gg/signalroot" class="text-gray-400 hover:text-gray-600">Discord</a>
+                    <a href="mailto:support@signalroot.com" class="text-gray-400 hover:text-gray-600">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

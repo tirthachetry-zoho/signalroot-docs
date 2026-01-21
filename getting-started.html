@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - SignalRoot Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #1a202c;
+            color: #cfbddb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        code {
+            background: #f3f4f6;
+            color: #e11d48;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-indigo-600 rounded-lg">
+                        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 4 7.5 4S4.168 5.477 3 7.5s1.168 2.477 3.5 2.477zM6.5 21v-4.5m0-4.5h11m-11 4.5v4.5"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">SignalRoot Docs</h1>
+                        <p class="text-sm text-gray-500">Getting Started Guide</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-500 hover:text-gray-700">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-6h4l-7-7-7 7z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/signalroot/signalroot" class="text-gray-500 hover:text-gray-700">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.1-.464.1-.702-.025-.288-.076-.543-.146-.78.134-.313.298-.617.462-1.125.086-.453.214-.904.479-1.36.337-.802-.594-1.2-.933-1.772-.615-2.878-.977-5.542-1.029-6.7-.6-3.4-.6-6.8 0-10.2 5.8-11.9 2.6-2.8 7.8-2.8 10.2 0 5.1-3.7 9.4-8.9 10.2-2.8 1.4-6.7 4.7-11.9 4.2-4.6 5.8-10.4 7.8-17.4.9-1.7 2.7-3.4 3.9-5.1 4.3-5.7 5.9-7.8 1.6-2.8 2.9-5.9 4.5-8.9.1-1.9 2.2-3.9 3.3-5.8 4.3-7.7 1.7-3.2 2.5-6.4 3.5-9.6 5.1-14.4.1-2.6 2-5.2 2.6-7.9 0-5.4-2.9-10.9-5.8-14.8-2.6-4.4-5.2-9.1-5.5-13.3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex items-center space-x-2 text-sm text-gray-500">
+            <a href="index.html" class="hover:text-gray-700">Home</a>
+            <span>/</span>
+            <span class="text-gray-900">Getting Started</span>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="prose prose-lg max-w-none">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8">Getting Started with SignalRoot</h1>
+                
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Prerequisites</h2>
+                    <p class="text-gray-600 mb-6">Before you begin, ensure you have the following installed:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-8 text-gray-600">
+                        <li><strong>Node.js</strong> (version 16 or higher)</li>
+                        <li><strong>Java</strong> (version 17 or higher)</li>
+                        <li><strong>Maven</strong> (version 3.6 or higher)</li>
+                        <li><strong>Docker</strong> (recommended for database)</li>
+                        <li><strong>Git</strong> for version control</li>
+                    </ul>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Option 1: Docker Quick Start (Recommended)</h2>
+                    <p class="text-gray-600 mb-6">The fastest way to get SignalRoot running is with Docker:</p>
+                    <pre class="mb-6"><code># Clone the repository
+git clone https://github.com/signalroot/signalroot.git
+cd signalroot
+
+# Start all services
+docker-compose up -d
+
+# Wait for services to be ready (about 2 minutes)
+docker-compose logs -f</code></pre>
+                    <p class="text-gray-600 mb-6">This will start:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-8 text-gray-600">
+                        <li><strong>Backend API</strong> on http://localhost:8080</li>
+                        <li><strong>Frontend Dashboard</strong> on http://localhost:3000</li>
+                        <li><strong>PostgreSQL Database</strong> on port 5432</li>
+                        <li><strong>Redis Cache</strong> on port 6379</li>
+                    </ul>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Option 2: Manual Installation</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">1. Backend Setup</h3>
+                    <pre class="mb-6"><code># Navigate to backend directory
+cd backend
+
+# Install dependencies and build
+mvn clean install
+
+# Start the application
+mvn spring-boot:run</code></pre>
+                    <p class="text-gray-600 mb-6">The backend will start on <code>http://localhost:8080</code> with:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-8 text-gray-600">
+                        <li>API endpoints at <code>/api/*</code></li>
+                        <li>Swagger documentation at <code>/swagger-ui.html</code></li>
+                        <li>Health checks at <code>/actuator/health</code></li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">2. Database Setup</h3>
+                    
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Using Docker (Recommended)</h4>
+                    <pre class="mb-6"><code># Start PostgreSQL
+docker run -d \
+  --name signalroot-db \
+  -e POSTGRES_DB=signalroot \
+  -e POSTGRES_USER=signalroot \
+  -e POSTGRES_PASSWORD=signalroot \
+  -p 5432:5432 \
+  postgres:15</code></pre>
+
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Manual Installation</h4>
+                    <pre class="mb-6"><code># Install PostgreSQL 15+
+# Create database and user
+createdb signalroot
+createuser signalroot
+psql -c "ALTER USER signalroot PASSWORD 'signalroot';"
+psql -c "GRANT ALL PRIVILEGES ON DATABASE signalroot TO signalroot;"</code></pre>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">3. Frontend Setup</h3>
+                    <pre class="mb-6"><code># Navigate to frontend directory
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev</code></pre>
+                    <p class="text-gray-600 mb-6">The frontend will start on <code>http://localhost:3000</code>.</p>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Configuration</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Environment Variables</h3>
+                    <p class="text-gray-600 mb-6">Create a <code>.env</code> file in the backend root:</p>
+                    <pre class="mb-6"><code># Database Configuration
+DATABASE_URL=jdbc:postgresql://localhost:5432/signalroot
+DATABASE_USERNAME=signalroot
+DATABASE_PASSWORD=signalroot
+
+# Application Configuration
+SERVER_PORT=8080
+SERVICE_MODE=production
+
+# Webhook Configuration
+WEBHOOK_SECRET=your-secure-webhook-secret
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK
+
+# Notification Configuration
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USERNAME=your-email@gmail.com
+EMAIL_PASSWORD=your-app-password</code></pre>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Verify Installation</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">1. Check Backend Health</h3>
+                    <pre class="mb-6"><code>curl http://localhost:8080/actuator/health</code></pre>
+                    <p class="text-gray-600 mb-6">Expected response:</p>
+                    <pre class="mb-8"><code>{"status":"UP"}</code></pre>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">2. Test API Endpoints</h3>
+                    <pre class="mb-6"><code># Test dogfooding scenarios
+curl -X POST http://localhost:8080/api/dogfooding/run-all
+
+# Test fake customer teams
+curl http://localhost:8080/api/fake-customers/teams
+
+# Test webhook processing
+curl -X POST http://localhost:8080/webhooks/alerts/pagerduty \
+  -H "Content-Type: application/json" \
+  -d '{"messages":[{"type":"incident","incident":{"id":"INC123","status":"triggered","title":"Test Alert"}}]}'</code></pre>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">3. Access Frontend</h3>
+                    <p class="text-gray-600 mb-6">Open http://localhost:3000 in your browser. You should see:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>✅ SignalRoot dashboard</li>
+                        <li>✅ Incident management interface</li>
+                        <li>✅ Service configuration options</li>
+                        <li>✅ Webhook integration guides</li>
+                    </ul>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">First Steps</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">1. Configure Your Organization</h3>
+                    <ol class="list-decimal list-inside space-y-2 mb-6 text-gray-600">
+                        <li>Navigate to <strong>Services</strong> page</li>
+                        <li>Add your team information</li>
+                        <li>Configure service mappings</li>
+                        <li>Set up alert frequencies</li>
+                    </ol>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">2. Set Up Webhooks</h3>
+                    <ol class="list-decimal list-inside space-y-2 mb-6 text-gray-600">
+                        <li>Go to your monitoring tool (PagerDuty, CloudWatch, etc.)</li>
+                        <li>Create webhooks pointing to:
+                            <ul class="list-disc list-inside ml-6 mt-2">
+                                <li>PagerDuty: <code>http://localhost:8080/webhooks/alerts/pagerduty</code></li>
+                                <li>CloudWatch: <code>http://localhost:8080/webhooks/alerts/cloudwatch</code></li>
+                                <li>GitHub: <code>http://localhost:8080/webhooks/deploy/github</code></li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">3. Configure Notifications</h3>
+                    <ol class="list-decimal list-inside space-y-2 mb-6 text-gray-600">
+                        <li>Navigate to <strong>Settings</strong> → <strong>Notifications</strong></li>
+                        <li>Add Slack webhook URL</li>
+                        <li>Configure email settings</li>
+                        <li>Test notification delivery</li>
+                    </ol>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">4. Test Alert Processing</h3>
+                    <pre class="mb-6"><code># Send a test alert
+curl -X POST http://localhost:8080/webhooks/alerts/pagerduty \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [{
+      "type": "incident",
+      "incident": {
+        "id": "TEST-001",
+        "status": "triggered",
+        "title": "Test Alert from Quick Start",
+        "service": "test-service",
+        "severity": "high"
+      }
+    }]
+  }'</code></pre>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Production Deployment</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Environment Setup</h3>
+                    <p class="text-gray-600 mb-6">For production deployment:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-8 text-gray-600">
+                        <li><strong>Database</strong>: Use managed PostgreSQL (AWS RDS, Google Cloud SQL, etc.)</li>
+                        <li><strong>Application</strong>: Deploy to container orchestration (Kubernetes, ECS, etc.)</li>
+                        <li><strong>Load Balancer</strong>: Configure SSL and domain routing</li>
+                        <li><strong>Monitoring</strong>: Set up application monitoring and logging</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Security Configuration</h3>
+                    <pre class="mb-6"><code># Generate secure webhook secret
+openssl rand -hex 32
+
+# Update production environment variables
+export WEBHOOK_SECRET=your-generated-secret
+export DATABASE_PASSWORD=your-secure-db-password</code></pre>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Troubleshooting</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Common Issues</h3>
+                    
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Port Already in Use</h4>
+                    <pre class="mb-6"><code># Find and kill process on port 8080
+lsof -ti:8080 | xargs kill -9
+
+# Or change port in application.properties
+server.port=8081</code></pre>
+
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Database Connection Failed</h4>
+                    <pre class="mb-6"><code># Check PostgreSQL status
+docker ps | grep postgres
+
+# Test database connection
+psql -h localhost -p 5432 -U signalroot -d signalroot</code></pre>
+
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">Frontend Build Errors</h4>
+                    <pre class="mb-6"><code># Clear node modules and reinstall
+rm -rf node_modules package-lock.json
+npm install</code></pre>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-2">🎉 Congratulations!</h3>
+                    <p class="text-blue-800">You now have SignalRoot running and ready to enrich your alerts!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-500">
+                <p>&copy; 2024 SignalRoot. All rights reserved.</p>
+                <p class="mt-2">Built with ❤️ using modern documentation tools</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-gray-600">Home</a>
+                    <a href="api-reference.html" class="text-gray-400 hover:text-gray-600">API Reference</a>
+                    <a href="https://github.com/signalroot/signalroot" class="text-gray-400 hover:text-gray-600">GitHub</a>
+                    <a href="https://discord.gg/signalroot" class="text-gray-400 hover:text-gray-600">Discord</a>
+                    <a href="mailto:support@signalroot.com" class="text-gray-400 hover:text-gray-600">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

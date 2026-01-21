@@ -1,0 +1,121 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "SignalRoot Documentation",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#818cf8",
+    "dark": "#4f46e5",
+    "anchors": {
+      "from": "#6366f1",
+      "to": "#818cf8"
+    }
+  },
+  "topbarCtaButton": {
+    "type": "github",
+    "url": "https://github.com/signalroot/signalroot"
+  },
+  "anchors": [
+    {
+      "name": "Live App",
+      "icon": "rocket",
+      "url": "https://signalroot.com"
+    },
+    {
+      "name": "API Reference",
+      "icon": "code",
+      "url": "https://api.signalroot.com"
+    },
+    {
+      "name": "Support",
+      "icon": "life-buoy",
+      "url": "https://discord.gg/signalroot"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "overview",
+        "quickstart",
+        "installation"
+      ]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "architecture",
+        "data-flow",
+        "alert-enrichment"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "webhooks",
+        "notifications",
+        "slack-integration"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-overview",
+        "authentication",
+        "endpoints",
+        "sdk"
+      ]
+    },
+    {
+      "group": "Operations",
+      "pages": [
+        "deployment",
+        "monitoring",
+        "security",
+        "performance"
+      ]
+    },
+    {
+      "group": "Advanced",
+      "pages": [
+        "custom-rules",
+        "scaling",
+        "troubleshooting"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/signalroot",
+    "github": "https://github.com/signalroot",
+    "linkedin": "https://linkedin.com/company/signalroot"
+  },
+  "background": {
+    "style": "gradient"
+  },
+  "analytics": {
+    "plausible": {
+      "domain": "docs.signalroot.com"
+    }
+  },
+  "search": true,
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true
+  },
+  "versions": [
+    {
+      "label": "v1.1 (Latest)",
+      "path": "/docs",
+      "version": "1.1"
+    },
+    {
+      "label": "v1.0",
+      "path": "/docs/v1.0",
+      "version": "1.0"
+    }
+  ]
+}
