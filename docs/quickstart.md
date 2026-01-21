@@ -62,8 +62,8 @@ The backend will start on `http://localhost:8080` with:
 docker run -d \
   --name signalroot-db \
   -e POSTGRES_DB=signalroot \
-  -e POSTGRES_USER=signalroot \
-  -e POSTGRES_PASSWORD=signalroot \
+  -e POSTGRES_USER=your_db_username \
+  -e POSTGRES_PASSWORD=your_secure_db_password \
   -p 5432:5432 \
   postgres:15
 ```
@@ -73,9 +73,9 @@ docker run -d \
 # Install PostgreSQL 15+
 # Create database and user
 createdb signalroot
-createuser signalroot
-psql -c "ALTER USER signalroot PASSWORD 'signalroot';"
-psql -c "GRANT ALL PRIVILEGES ON DATABASE signalroot TO signalroot;"
+createuser your_db_username
+psql -c "ALTER USER your_db_username PASSWORD 'your_secure_db_password';"
+psql -c "GRANT ALL PRIVILEGES ON DATABASE signalroot TO your_db_username;"
 ```
 
 ### 3. Frontend Setup
@@ -102,26 +102,26 @@ Create a `.env` file in the backend root:
 ```env
 # Database Configuration
 DATABASE_URL=jdbc:postgresql://localhost:5432/signalroot
-DATABASE_USERNAME=signalroot
-DATABASE_PASSWORD=signalroot
+DATABASE_USERNAME=your_db_username
+DATABASE_PASSWORD=your_secure_db_password
 
 # Application Configuration
 SERVER_PORT=8080
 SERVICE_MODE=production
 
 # Webhook Configuration
-WEBHOOK_SECRET=your-secure-webhook-secret
+WEBHOOK_SECRET=your-secure-webhook-secret-generate-with-openssl-rand-hex-32
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK
 
 # Notification Configuration
-EMAIL_HOST=smtp.gmail.com
+EMAIL_HOST=your-smtp-server.com
 EMAIL_PORT=587
-EMAIL_USERNAME=your-email@gmail.com
-EMAIL_PASSWORD=your-app-password
+EMAIL_USERNAME=your-email@domain.com
+EMAIL_PASSWORD=your-app-specific-password
 
 # External Services
-GITHUB_TOKEN=your-github-token
-PAGERDUTY_TOKEN=your-pagerduty-token
+GITHUB_TOKEN=your-github-personal-access-token
+PAGERDUTY_TOKEN=your-pagerduty-api-token
 ```
 
 ### Application Properties
@@ -134,8 +134,8 @@ server.port=8080
 
 # Database Configuration
 spring.datasource.url=jdbc:postgresql://localhost:5432/signalroot
-spring.datasource.username=signalroot
-spring.datasource.password=signalroot
+spring.datasource.username=your_db_username
+spring.datasource.password=your_secure_db_password
 
 # Service Mode
 signalroot.service.mode=production
