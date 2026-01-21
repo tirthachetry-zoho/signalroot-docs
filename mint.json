@@ -41,7 +41,7 @@
       "group": "Getting Started",
       "pages": [
         "docs/overview",
-        "docs/why-signalroot",
+        "why-signalroot",
         "quickstart",
         "docs/installation"
       ]
