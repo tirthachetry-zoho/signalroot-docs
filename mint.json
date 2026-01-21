@@ -47,25 +47,9 @@
       ]
     },
     {
-      "group": "Core Concepts",
-      "pages": [
-        "architecture",
-        "data-flow",
-        "alert-enrichment"
-      ]
-    },
-    {
-      "group": "Integrations",
-      "pages": [
-        "webhooks",
-        "notifications",
-        "slack-integration"
-      ]
-    },
-    {
       "group": "API Reference",
       "pages": [
-        "api-overview",
+        "api-reference",
         "authentication",
         "endpoints",
         "sdk"
