@@ -2,6 +2,38 @@
 
 SignalRoot is an advanced alert enrichment platform that transforms your raw alerts into actionable incidents with deployment context and historical insights.
 
+## Why SignalRoot?
+
+### 🎯 **For Business Leaders**
+- **Reduced Downtime**: Get systems back online 60% faster with automated incident context
+- **Cost Savings**: Minimize revenue impact from outages with faster resolution
+- **Team Efficiency**: Reduce alert fatigue and improve engineering productivity
+- **Data-Driven Decisions**: Make informed decisions with incident analytics and trends
+
+### 👥 **For Product Managers**
+- **Deployment Impact**: Understand how releases affect system stability
+- **User Experience**: Track how incidents impact customer satisfaction
+- **Feature Reliability**: Monitor which features cause the most issues
+- **Planning Insights**: Use historical data to improve future releases
+
+### 🔧 **For Engineering Teams**
+- **Smart Alerts**: Get meaningful context instead of raw monitoring noise
+- **Faster Debugging**: Automatically see if recent deployments caused issues
+- **Knowledge Sharing**: Learn from past incidents across the entire organization
+- **Reduced On-Call Stress**: Better work-life balance with intelligent alerting
+
+### 🏢 **For IT Operations**
+- **Centralized Monitoring**: One platform for all your monitoring tools
+- **Automated Triage**: Route alerts to the right teams automatically
+- **Compliance**: Maintain audit trails for all incidents
+- **Scalability**: Handle growing infrastructure without adding headcount
+
+### 📊 **For Customer Support**
+- **Proactive Communication**: Know about issues before customers report them
+- **Impact Assessment**: Understand which customers are affected
+- **Resolution Updates**: Real-time status for customer inquiries
+- **Self-Service**: Reduce support tickets with better incident visibility
+
 ## What is SignalRoot?
 
 SignalRoot sits between your monitoring systems and your incident response workflow, automatically enriching alerts with:
