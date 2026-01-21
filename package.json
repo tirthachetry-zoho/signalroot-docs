@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "mintlify dev",
     "build": "mintlify build",
+    "vercel-build": "echo 'No build needed for static docs'",
     "serve": "mintlify serve",
     "lint": "mintlify lint",
     "preview": "mintlify preview"
